@@ -1,0 +1,5 @@
+{
+  "name": "crew-avatar",
+  "owner": { "name": "Cheffyy666" },
+  "plugins": [{ "name": "crew-avatar", "source": "./" }]
+}
