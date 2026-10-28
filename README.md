@@ -6,8 +6,8 @@ A Claude Code mod that shows a bar with an animated avatar above the prompt box.
 
 Switch the avatar with the `/crew` command:
 
-- `/crew` lists the available faces (numbered).
-- `/crew <name or number>` picks one, e.g. `/crew 2` or `/crew napoleon`.
+- `/crew` lists the available faces (numbered): 总指挥, 小白, 小依, 小娅.
+- `/crew <name or number>` picks one, e.g. `/crew 2` or `/crew 小白`.
 
 Or click the "换一个" button in the bar to cycle through them.
 

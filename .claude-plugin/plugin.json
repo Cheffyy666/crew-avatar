@@ -1,1 +1,1 @@
-{ "name": "crew-avatar", "version": "0.2.0", "description": "An animated agent avatar beside the chat prompt that blinks, looks around and hops while Claude works.", "types": "./types/index.d.ts" }
+{ "name": "crew-avatar", "version": "0.3.0", "description": "An animated agent avatar beside the chat prompt that blinks, looks around and hops while Claude works.", "types": "./types/index.d.ts" }
