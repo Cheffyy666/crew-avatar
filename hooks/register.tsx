@@ -37,7 +37,11 @@ function face(c: Look, busy: boolean): string {
   const glasses = c.glasses ? `<g fill="none" stroke="#1E2230" stroke-width="1.6"><circle cx="26" cy="36" r="5"/><circle cx="38" cy="36" r="5"/><path d="M31 36h2"/></g>` : ''
   const ear = c.ear ? `<circle cx="16.5" cy="44" r="2" fill="#F5F2EA"/>` : ''
   const cheek = c.cheek ? `<g fill="#F08C8C" opacity=".45"><circle cx="22" cy="42" r="3"/><circle cx="42" cy="42" r="3"/></g>` : ''
-  const brow = `<path d="M22 30.5q4-2.6 8 0M34 30.5q4-2.6 8 0" stroke="rgba(0,0,0,.4)" stroke-width="${c.brow ? 2 : 1.4}" fill="none" stroke-linecap="round"/>`
+  const by = busy ? 28.5 : 30.5
+  const mouth = busy
+    ? `<ellipse cx="32" cy="46.8" rx="2" ry="2.4" fill="#7A3E32"/>`
+    : `<path d="M28.5 45.5q3.5 2.6 7 0" stroke="#7A3E32" stroke-width="1.6" fill="none" stroke-linecap="round"/>`
+  const brow = `<path d="M22 ${by}q4-2.6 8 0M34 ${by}q4-2.6 8 0" stroke="rgba(0,0,0,.4)" stroke-width="${c.brow ? 2 : 1.4}" fill="none" stroke-linecap="round"/>`
   const blink = `<animate attributeName="ry" values="2.9;2.9;0.3;2.9" keyTimes="0;0.93;0.96;1" dur="4.8s" repeatCount="indefinite"/>`
   const look = `<animateTransform attributeName="transform" type="translate" values="0 0;1.6 0;1.6 0;-1.6 .6;-1.6 .6;0 0" keyTimes="0;.2;.4;.6;.8;1" dur="7s" repeatCount="indefinite"/>`
   const hop = busy
@@ -49,7 +53,7 @@ ${back}<path d="M10 66c0-11 9-15 22-15s22 4 22 15z" fill="${c.cloth}"/><rect x="
 <circle cx="17" cy="39" r="3.2" fill="${skin}"/><circle cx="47" cy="39" r="3.2" fill="${skin}"/><ellipse cx="32" cy="37" rx="15" ry="16" fill="${skin}"/>
 ${cheek}${ear}${beard}
 <g>${look}<g fill="#1E2230"><ellipse cx="26" cy="37" rx="2.1" ry="2.9">${blink}</ellipse><ellipse cx="38" cy="37" rx="2.1" ry="2.9">${blink}</ellipse></g>${brow}</g>
-${glasses}<path d="M28.5 45.5q3.5 2.6 7 0" stroke="#7A3E32" stroke-width="1.6" fill="none" stroke-linecap="round"/>${stache}${front}${flower}</g></g></svg>`
+${glasses}${mouth}${stache}${front}${flower}</g></g></svg>`
 }
 
 const avatar = atom({ plugin: 'crew-avatar', key: 'avatar' } as const, 'eng')

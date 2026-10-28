@@ -1,6 +1,6 @@
 # crew-avatar
 
-A Claude Code mod that shows a bar with an animated avatar above the prompt box. The avatar blinks, looks around and hops now and then; while Claude is working it hops continuously. A "换一个" (swap) button cycles to the next face.
+A Claude Code mod that shows a bar with an animated avatar above the prompt box. The avatar blinks, looks around and hops now and then; while Claude is working it hops continuously. While working, the avatar raises its eyebrows and opens its mouth; when idle it smiles. A "换一个" (swap) button cycles to the next face.
 
 ## Usage
 
